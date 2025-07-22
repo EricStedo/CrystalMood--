@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalMood - Thérapie par les Couleurs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="bodyTheme">
+    <div class="header" id="headerTheme">
+        <h1>💎 CrystalMood</h1>
+        <p>Thérapie par les couleurs et harmonisation émotionnelle</p>
+        <div class="pause-branding">
+            <div class="logo">⏸️ PAUSE</div>
+            <div class="subtitle">Innovation & Bien-être en Entreprise</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Analyseur d'humeur par couleurs -->
+        <div class="mood-analyzer">
+            <h2>🎨 Quel est votre état émotionnel actuel ?</h2>
+            <p>Choisissez la couleur qui vous attire le plus en ce moment</p>
+            
+            <div class="color-palette">
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #e74c3c, #c0392b)" onclick="selectColor('red')" data-color="red"></div>
+                    <div class="color-name">Rouge</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #f39c12, #e67e22)" onclick="selectColor('orange')" data-color="orange"></div>
+                    <div class="color-name">Orange</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #f1c40f, #f39c12)" onclick="selectColor('yellow')" data-color="yellow"></div>
+                    <div class="color-name">Jaune</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #27ae60, #2ecc71)" onclick="selectColor('green')" data-color="green"></div>
+                    <div class="color-name">Vert</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #3498db, #2980b9)" onclick="selectColor('blue')" data-color="blue"></div>
+                    <div class="color-name">Bleu</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #6c5ce7, #5f3dc4)" onclick="selectColor('indigo')" data-color="indigo"></div>
+                    <div class="color-name">Indigo</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #9b59b6, #8e44ad)" onclick="selectColor('violet')" data-color="violet"></div>
+                    <div class="color-name">Violet</div>
+                </div>
+                <div class="color-container">
+                    <div class="color-orb" style="background: linear-gradient(135deg, #e91e63, #ad1457)" onclick="selectColor('pink')" data-color="pink"></div>
+                    <div class="color-name">Rose</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone de thérapie par couleurs -->
+        <div class="therapy-display" id="therapyDisplay">
+            <div class="color-info" id="defaultInfo">
+                <div class="color-title">🌈 Bienvenue dans CrystalMood</div>
+                <div class="color-description">
+                    La chromothérapie utilise les vibrations colorées pour harmoniser votre état émotionnel et énergétique. 
+                    Chaque couleur possède une fréquence unique qui peut influencer positivement votre bien-être mental et physique.
+                    <br><br>
+                    Sélectionnez une couleur ci-dessus pour découvrir ses propriétés thérapeutiques et commencer votre séance personnalisée.
+                </div>
+            </div>
+
+            <!-- Infos pour chaque couleur -->
+            <div class="color-info" id="redInfo">
+                <div class="color-title">🔴 Rouge - Énergie & Vitalité</div>
+                <div class="color-description">
+                    Le rouge stimule la circulation sanguine, booste l'énergie vitale et renforce la confiance en soi. 
+                    Idéal quand vous vous sentez fatigué, démotivé ou que vous manquez de courage.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #e74c3c;">
+                        <h4>💪 Énergie Physique</h4>
+                        <p>Stimule la circulation et combat la fatigue</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #e74c3c;">
+                        <h4>🎯 Motivation</h4>
+                        <p>Augmente la détermination et le courage</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #e74c3c;">
+                        <h4>🔥 Passion</h4>
+                        <p>Réveille l'enthousiasme et la créativité</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #e74c3c;">
+                    <strong>Chakra racine</strong> - Ancrage, sécurité, survie
+                </div>
+            </div>
+
+            <div class="color-info" id="orangeInfo">
+                <div class="color-title">🟠 Orange - Joie & Créativité</div>
+                <div class="color-description">
+                    L'orange stimule la joie de vivre, la créativité et l'optimisme. 
+                    Parfait pour sortir de la monotonie et retrouver l'enthousiasme.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #f39c12;">
+                        <h4>🎨 Créativité</h4>
+                        <p>Stimule l'imagination et l'innovation</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #f39c12;">
+                        <h4>😊 Optimisme</h4>
+                        <p>Améliore l'humeur et la joie de vivre</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #f39c12;">
+                        <h4>🤝 Sociabilité</h4>
+                        <p>Facilite les interactions sociales</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #f39c12;">
+                    <strong>Chakra sacré</strong> - Créativité, sexualité, émotions
+                </div>
+            </div>
+
+            <div class="color-info" id="yellowInfo">
+                <div class="color-title">🟡 Jaune - Intelligence & Clarté</div>
+                <div class="color-description">
+                    Le jaune stimule l'intellect, améliore la concentration et favorise la clarté mentale. 
+                    Idéal pour les périodes d'étude, de réflexion ou de prise de décision.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #f1c40f;">
+                        <h4>🧠 Concentration</h4>
+                        <p>Améliore la focus et l'attention</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #f1c40f;">
+                        <h4>💡 Clarté Mentale</h4>
+                        <p>Favorise la réflexion et les idées</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #f1c40f;">
+                        <h4>☀️ Optimisme</h4>
+                        <p>Apporte gaieté et positivité</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #f1c40f;">
+                    <strong>Chakra du plexus solaire</strong> - Pouvoir personnel, confiance
+                </div>
+            </div>
+
+            <div class="color-info" id="greenInfo">
+                <div class="color-title">🟢 Vert - Équilibre & Guérison</div>
+                <div class="color-description">
+                    Le vert harmonise, apaise et favorise la guérison émotionnelle. 
+                    C'est la couleur de l'équilibre parfait entre corps et esprit.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #27ae60;">
+                        <h4>⚖️ Équilibre</h4>
+                        <p>Harmonise les émotions et l'énergie</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #27ae60;">
+                        <h4>🌿 Guérison</h4>
+                        <p>Favorise la régénération physique</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #27ae60;">
+                        <h4>🧘 Sérénité</h4>
+                        <p>Apporte calme et paix intérieure</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #27ae60;">
+                    <strong>Chakra du cœur</strong> - Amour, compassion, guérison
+                </div>
+            </div>
+
+            <div class="color-info" id="blueInfo">
+                <div class="color-title">🔵 Bleu - Paix & Communication</div>
+                <div class="color-description">
+                    Le bleu apaise l'esprit, favorise la communication et diminue le stress. 
+                    Parfait pour retrouver le calme et améliorer l'expression de soi.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #3498db;">
+                        <h4>🕊️ Paix Intérieure</h4>
+                        <p>Calme l'agitation mentale</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #3498db;">
+                        <h4>🗣️ Communication</h4>
+                        <p>Améliore l'expression et l'écoute</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #3498db;">
+                        <h4>❄️ Rafraîchissement</h4>
+                        <p>Diminue l'inflammation et la colère</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #3498db;">
+                    <strong>Chakra de la gorge</strong> - Communication, expression, vérité
+                </div>
+            </div>
+
+            <div class="color-info" id="indigoInfo">
+                <div class="color-title">🔮 Indigo - Intuition & Sagesse</div>
+                <div class="color-description">
+                    L'indigo développe l'intuition, la méditation profonde et la connexion spirituelle. 
+                    Idéal pour la introspection et le développement personnel.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #6c5ce7;">
+                        <h4>🔮 Intuition</h4>
+                        <p>Développe la perception subtile</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #6c5ce7;">
+                        <h4>🧘‍♀️ Méditation</h4>
+                        <p>Favorise les états méditatifs</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #6c5ce7;">
+                        <h4>👁️ Clairvoyance</h4>
+                        <p>Améliore la vision intérieure</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #6c5ce7;">
+                    <strong>Chakra du 3ème œil</strong> - Intuition, sagesse, clairvoyance
+                </div>
+            </div>
+
+            <div class="color-info" id="violetInfo">
+                <div class="color-title">🟣 Violet - Spiritualité & Transformation</div>
+                <div class="color-description">
+                    Le violet élève la conscience, favorise la transformation personnelle et la connexion spirituelle. 
+                    Parfait pour les périodes de changement et d'évolution.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #9b59b6;">
+                        <h4>✨ Transformation</h4>
+                        <p>Facilite les changements profonds</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #9b59b6;">
+                        <h4>🙏 Spiritualité</h4>
+                        <p>Élève la conscience spirituelle</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #9b59b6;">
+                        <h4>👑 Noblesse</h4>
+                        <p>Développe la dignité intérieure</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #9b59b6;">
+                    <strong>Chakra couronne</strong> - Spiritualité, conscience universelle
+                </div>
+            </div>
+
+            <div class="color-info" id="pinkInfo">
+                <div class="color-title">🩷 Rose - Amour & Tendresse</div>
+                <div class="color-description">
+                    Le rose apporte douceur, amour inconditionnel et guérison émotionnelle. 
+                    Idéal pour apaiser les blessures du cœur et cultiver la bienveillance.
+                </div>
+                <div class="therapy-benefits">
+                    <div class="benefit-card" style="border-left-color: #e91e63;">
+                        <h4>💕 Amour de Soi</h4>
+                        <p>Développe l'auto-compassion</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #e91e63;">
+                        <h4>🤗 Tendresse</h4>
+                        <p>Apporte douceur et réconfort</p>
+                    </div>
+                    <div class="benefit-card" style="border-left-color: #e91e63;">
+                        <h4>💖 Guérison Émotionnelle</h4>
+                        <p>Aide à cicatriser les blessures</p>
+                    </div>
+                </div>
+                <div class="chakra-info" style="border-left-color: #e91e63;">
+                    <strong>Chakra du cœur supérieur</strong> - Amour inconditionnel, compassion
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone de méditation colorée -->
+        <div class="meditation-zone" id="meditationZone">
+            <div class="color-waves" id="colorWaves"></div>
+            <div class="meditation-controls">
+                <h3>🧘‍♀️ Méditation Chromatique PAUSE</h3>
+                <div class="therapy-timer" id="therapyTimer">5:00</div>
+                <div class="breathing-guide" id="breathingGuide">
+                    Installez-vous confortablement et laissez-vous baigner par les vibrations colorées
+                </div>
+                
+                <button class="start-therapy-btn" id="startTherapy" onclick="startColorTherapy()">
+                    🌈 Commencer la thérapie
+                </button>
+                <button class="stop-therapy-btn" id="stopTherapy" onclick="stopColorTherapy()">
+                    ⏹️ Arrêter
+                </button>
+            </div>
+        </div>
+
+        <!-- Recommandation personnalisée -->
+        <div class="color-recommendation" id="colorRecommendation">
+            <h3>💡 Recommandation PAUSE</h3>
+            <div class="recommendation-text" id="recommendationText">
+                Choisissez une couleur pour recevoir des conseils personnalisés basés sur la chromothérapie
+            </div>
+        </div>
+
+        <!-- Palette personnelle -->
+        <div class="personal-palette">
+            <h3>🎨 Votre Palette Personnelle</h3>
+            <p>Les couleurs qui vous font du bien, sauvegardées pour vos séances futures</p>
+            <div class="saved-colors" id="savedColors">
+                <!-- Les couleurs sauvegardées apparaîtront ici -->
+            </div>
+            <button class="start-therapy-btn" onclick="saveCurrentColor()" id="saveColorBtn" style="display: none;">
+                💾 Sauvegarder cette couleur
+            </button>
+        </div>
+
+        <!-- Spectre de couleurs personnalisé -->
+        <div class="mood-analyzer">
+            <h3>🌈 Créateur de Couleur Personnalisée</h3>
+            <p>Déplacez le curseur pour créer votre couleur thérapeutique unique</p>
+            <div class="color-spectrum" id="colorSpectrum" onclick="selectCustomColor(event)">
+                <div class="spectrum-selector" id="spectrumSelector"></div>
+            </div>
+            <div style="text-align: center; margin: 20px 0;">
+                <div id="customColorDisplay" style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto; border: 3px solid rgba(255,255,255,0.3); background: #ff0000;"></div>
+                <p id="customColorName" style="margin-top: 10px; font-weight: bold;">Rouge Personnalisé</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
